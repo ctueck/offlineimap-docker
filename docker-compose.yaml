@@ -1,0 +1,11 @@
+services:
+  app:
+    build: build/
+    volumes:
+      - data:/data
+      - ./offlineimap.conf:/root/.offlineimaprc:ro
+      - ./passwords:/root/.passwords:ro
+
+volumes:
+  data:
+
